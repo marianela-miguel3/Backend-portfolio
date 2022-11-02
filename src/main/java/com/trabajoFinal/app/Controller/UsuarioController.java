@@ -23,7 +23,7 @@ import com.trabajoFinal.app.Service.IUserService;
 
 @RestController
 @RequestMapping("/usuario")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")
 
 
 public class UsuarioController {

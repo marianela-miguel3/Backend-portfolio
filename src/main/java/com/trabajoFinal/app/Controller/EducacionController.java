@@ -23,7 +23,7 @@ import com.trabajoFinal.app.Service.IEducacionService;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")
 public class EducacionController {
 
 	@Autowired

@@ -23,7 +23,7 @@ import com.trabajoFinal.app.Service.IExperienciaService;
 
 @RestController
 @RequestMapping("/experiencia")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")
 public class ExperienciaController {
  @Autowired
  private IExperienciaService iexperienciaService;
