@@ -14,10 +14,10 @@ public class Login {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(name="usuario", unique=true)
 	private String usuario;
-	
+
 	@Column(name="password", unique=true)
 	private String password;
 
@@ -52,8 +52,8 @@ public class Login {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
+
+
+
 
 }*/

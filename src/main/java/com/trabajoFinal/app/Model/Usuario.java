@@ -1,6 +1,11 @@
 package com.trabajoFinal.app.Model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 
@@ -11,33 +16,33 @@ public class Usuario {
    @GeneratedValue(strategy=GenerationType.IDENTITY)
    @Column(name="id")
    private Long id;
-   
+
    @Column(name="nombre")
    private String nombre;
-   
+
    @Column(name="apellido")
    private String apellido;
-   
+
    @Column(name="titulo")
    private String titulo;
-   
+
    @Column(name="imagen")
    private String imagen;
-   
+
    @Column(name="descripcion")
    private String descripcion;
-   
+
   /* @OneToMany(mappedBy="usuario")
    @JoinColumn(name="id")
    (mappedBy="usuario", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
    private List<Experiencia> experiencias;
    */
-   
+
    /*@OneToMany(fetch=FetchType.LAZY, mappedBy="usuario", cascade= CascadeType.ALL)
    private List <Experiencia> experiencias;
    */
-   
-   
+
+
 
 public Usuario(String nombre, String apellido, String titulo, String imagen, String descripcion) {
 	this.nombre = nombre;
@@ -111,15 +116,15 @@ public void setDescripcion(String descripcion) {
 }
 
 
-  
+
    /*@OneToMany(mappedBy="usuario", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
    private List<Experiencia> experiencias;
-   
+
    @OneToMany(mappedBy="usuario", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
    private List<Educacion> educaciones;
-   
+
    @OneToMany(mappedBy="usuario", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
    private List <Proyecto> proyectos;
    	   */
-   
+
 }

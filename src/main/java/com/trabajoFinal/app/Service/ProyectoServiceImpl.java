@@ -12,8 +12,8 @@ import com.trabajoFinal.app.Repository.IProyectoRepository;
 
 @Service
 public class ProyectoServiceImpl implements IProyectoService{
-	
-	@Autowired 
+
+	@Autowired
 	private IProyectoRepository iproyectoRepository;
 
 	@Override
@@ -24,7 +24,7 @@ public class ProyectoServiceImpl implements IProyectoService{
 
 	@Override
 	@Transactional(readOnly=true)
-	public Page<Proyecto> findAll(org.springframework.data.domain.Pageable pageable) {	
+	public Page<Proyecto> findAll(org.springframework.data.domain.Pageable pageable) {
 		return iproyectoRepository.findAll(pageable);
 	}
 
@@ -43,7 +43,7 @@ public class ProyectoServiceImpl implements IProyectoService{
 	@Override
 	@Transactional
 	public void deleteById(Long id) {
-		iproyectoRepository.deleteById(id);	
+		iproyectoRepository.deleteById(id);
 	}
 
 }

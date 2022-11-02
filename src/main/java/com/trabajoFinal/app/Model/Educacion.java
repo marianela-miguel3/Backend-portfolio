@@ -1,6 +1,11 @@
 package com.trabajoFinal.app.Model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
@@ -58,12 +63,12 @@ public class Educacion {
 	public void setLugar(String lugar) {
 		this.lugar = lugar;
 	}
-	
+
 	/*@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;*/
-	
-	 
+
+
 	}
 
 

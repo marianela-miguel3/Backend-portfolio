@@ -12,8 +12,8 @@ import com.trabajoFinal.app.Repository.IEducacionRepository;
 
 @Service
 public class EducacionServiceImpl implements IEducacionService{
-	
-	@Autowired 
+
+	@Autowired
 	private IEducacionRepository ieducacionRepository;
 
 	@Override
@@ -24,7 +24,7 @@ public class EducacionServiceImpl implements IEducacionService{
 
 	@Override
 	@Transactional(readOnly=true)
-	public Page<Educacion> findAll(org.springframework.data.domain.Pageable pageable) {	
+	public Page<Educacion> findAll(org.springframework.data.domain.Pageable pageable) {
 		return ieducacionRepository.findAll(pageable);
 	}
 	@Override
@@ -43,7 +43,7 @@ public class EducacionServiceImpl implements IEducacionService{
 	@Transactional
 	public void deleteById(Long id) {
 	     ieducacionRepository.deleteById(id);
-		
+
 	}
 
 }

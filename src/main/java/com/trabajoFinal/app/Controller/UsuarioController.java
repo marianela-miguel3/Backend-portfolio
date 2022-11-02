@@ -27,16 +27,16 @@ import com.trabajoFinal.app.Service.IUserService;
 
 
 public class UsuarioController {
-	 
-	@Autowired 
+
+	@Autowired
 	 private IUserService iUserService;
-	 
+
 	//crear un usuario
 	@PostMapping
 	public ResponseEntity<?> create(@RequestBody Usuario usuario) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(iUserService.save(usuario));
 	}
-	
+
 	//leer un usuario
 	@GetMapping("/{id}")
 	public ResponseEntity<?> read(@PathVariable(value="id") Long userId){
@@ -60,7 +60,7 @@ public class UsuarioController {
 	  usuario.get().setDescripcion(userDetails.getDescripcion());
 	  return ResponseEntity.status(HttpStatus.CREATED).body(iUserService.save(usuario.get()));
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete (@PathVariable Long id){
 	if(!iUserService.findById(id).isPresent()) {
@@ -69,7 +69,7 @@ public class UsuarioController {
 	iUserService.deleteById(id);
 	return ResponseEntity.ok().build();
 	}
-	
+
 	@GetMapping
 	public List<Usuario> readAll () {
 	List<Usuario> usuarios = StreamSupport

@@ -12,10 +12,10 @@ import com.trabajoFinal.app.Repository.ILoginRepository;
 @Service
 public class LoginServiceImpl implements ILoginService{
 
-	@Autowired 
+	@Autowired
 	private ILoginRepository iloginRepository;
-	
-	
+
+
 	@Override
 	@Transactional(readOnly=true)
 	public Iterable<Login> findAll() {
@@ -24,7 +24,7 @@ public class LoginServiceImpl implements ILoginService{
 
 	@Override
 	@Transactional(readOnly=true)
-	public Page<Login> findAll(org.springframework.data.domain.Pageable pageable) {	
+	public Page<Login> findAll(org.springframework.data.domain.Pageable pageable) {
 		return iloginRepository.findAll(pageable);
 	}
 

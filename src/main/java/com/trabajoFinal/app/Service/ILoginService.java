@@ -9,13 +9,13 @@ import com.trabajoFinal.app.Model.Login;
 
 public interface ILoginService {
 public Iterable<Login> findAll();
-	
+
 	public Page<Login> findAll(Pageable pageable);
-	
+
 	public Optional <Login> findById(Long id);
-	
+
 	public Login save (Login login);
-	
+
 	public void deleteById(Long id);
 }
 */

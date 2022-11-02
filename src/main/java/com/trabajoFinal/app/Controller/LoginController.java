@@ -30,9 +30,9 @@ import com.trabajoFinal.app.Model.Login;
 @RequestMapping("/login")
 @CrossOrigin(origins="http://localhost:4200")
 
-public class LoginController { 
+public class LoginController {
 
-	@Autowired 
+	@Autowired
 	 private ILoginService iloginService;
 }
 
@@ -40,15 +40,15 @@ public class LoginController {
 @RestController
 @CrossOrigin(origins="http://localhost:4200")
 public class LoginController{
-	
+
 	@GetMapping("/")
 	public String login() {
 		return "authenticated succesfully";
 	}
-	
+
 	@GetMapping("/getUser")
 	public List<Login> getUser(){
 		return Stream.of(new Login("mmiguel","ready")).collect(Collectors.toList());
 	}
-	
+
 }*/

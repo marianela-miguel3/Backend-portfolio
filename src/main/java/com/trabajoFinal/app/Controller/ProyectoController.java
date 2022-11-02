@@ -25,10 +25,10 @@ import com.trabajoFinal.app.Service.IProyectoService;
 @RequestMapping("/proyecto")
 @CrossOrigin(origins="http://localhost:4200")
 public class ProyectoController {
-	
+
 	@Autowired
 	private IProyectoService iproyectoService;
-	
+
 	// crear uno
 	@PostMapping
 	public ResponseEntity<?> create(@RequestBody Proyecto proyecto) {
@@ -57,7 +57,7 @@ public class ProyectoController {
 		proyecto.get().setImagen(userDetails.getImagen());
 		return ResponseEntity.status(HttpStatus.CREATED).body(iproyectoService.save(proyecto.get()));
 	}
-	
+
 	//eliminar uno
 			@DeleteMapping("/{id}")
 			public ResponseEntity<?> delete (@PathVariable Long id){
@@ -67,7 +67,7 @@ public class ProyectoController {
 			iproyectoService.deleteById(id);
 			return ResponseEntity.ok().build();
 			}
-			
+
 			//leer todos
 			@GetMapping
 			public List<Proyecto> readAll () {

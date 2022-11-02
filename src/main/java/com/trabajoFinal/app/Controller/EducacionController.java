@@ -26,15 +26,15 @@ import com.trabajoFinal.app.Service.IEducacionService;
 @CrossOrigin(origins="http://localhost:4200")
 public class EducacionController {
 
-	@Autowired 
+	@Autowired
 	 private IEducacionService ieducacionService;
-	
+
 	//crear uno
 		@PostMapping
 		public ResponseEntity<?> create(@RequestBody Educacion educacion) {
 			return ResponseEntity.status(HttpStatus.CREATED).body(ieducacionService.save(educacion));
 		}
-	 
+
 		//leer uno
 		@GetMapping("/{id}")
 		public ResponseEntity<?> read(@PathVariable(value="id") Long educacionId){
@@ -44,7 +44,7 @@ public class EducacionController {
 			}
 			return ResponseEntity.ok(oEducacion);
 		}
-		
+
 		//actualizar uno
 		@PutMapping("/{id}")
 		public ResponseEntity<?> update (@RequestBody Educacion userDetails, @PathVariable (value="id") Long educacionId) {
@@ -58,7 +58,7 @@ public class EducacionController {
 		educacion.get().setLugar(userDetails.getLugar());
 		  return ResponseEntity.status(HttpStatus.CREATED).body(ieducacionService.save(educacion.get()));
 		}
-		
+
 		//eliminar uno
 		@DeleteMapping("/{id}")
 		public ResponseEntity<?> delete (@PathVariable Long id){
@@ -68,7 +68,7 @@ public class EducacionController {
 		ieducacionService.deleteById(id);
 		return ResponseEntity.ok().build();
 		}
-		
+
 		//leer todos
 		@GetMapping
 		public List<Educacion> readAll () {

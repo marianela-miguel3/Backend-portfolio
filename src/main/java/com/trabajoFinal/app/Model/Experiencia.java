@@ -20,21 +20,21 @@ public class Experiencia {
 	private String anio;
 	@Column(name="descripcion")
 	private String descripcion;
- 
+
 	/*
 ;*/
 	/*@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="idUsuario")
 	private Usuario usuario;*/
-	
+
 
 	public Experiencia(String titulo, String anio, String descripcion) {
 		this.titulo = titulo;
 		this.anio = anio;
 		this.descripcion = descripcion;
 	}
-	
-	
+
+
 
 	public Experiencia() {
 	}
@@ -81,9 +81,9 @@ public class Experiencia {
 		this.usuario = usuario;
 	}
 	*/
-	
-	
-	
+
+
+
 }
 
 

@@ -7,6 +7,6 @@ import com.trabajoFinal.app.Model.Usuario;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository <Usuario, Long>{
-	
+
 
 }

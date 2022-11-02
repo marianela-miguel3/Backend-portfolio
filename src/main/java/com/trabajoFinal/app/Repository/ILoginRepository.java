@@ -10,7 +10,7 @@ import com.trabajoFinal.app.Model.Login;
 @Repository
 public interface ILoginRepository extends JpaRepository<Login,Long> {
  Optional<Login> findByNombreLogin();
- 
+
  boolean existsByNombreLogin(String nombreLogin);
 }
 */

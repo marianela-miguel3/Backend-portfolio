@@ -11,8 +11,8 @@ import com.trabajoFinal.app.Repository.IUsuarioRepository;
 
 @Service
 public class UsuarioServiceImpl implements IUserService{
- 
-	@Autowired 
+
+	@Autowired
 	private IUsuarioRepository iusuarioRepository;
 
 	@Override
@@ -23,7 +23,7 @@ public class UsuarioServiceImpl implements IUserService{
 
 	@Override
 	@Transactional(readOnly=true)
-	public Page<Usuario> findAll(org.springframework.data.domain.Pageable pageable) {	
+	public Page<Usuario> findAll(org.springframework.data.domain.Pageable pageable) {
 		return iusuarioRepository.findAll(pageable);
 	}
 

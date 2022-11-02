@@ -51,8 +51,8 @@ public class Proyecto {
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
 	}
-	
-	
+
+
 	/*@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;*/
