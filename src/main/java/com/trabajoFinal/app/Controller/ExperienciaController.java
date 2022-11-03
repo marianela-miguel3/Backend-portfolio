@@ -23,8 +23,9 @@ import com.trabajoFinal.app.Service.IExperienciaService;
 
 @RestController
 @RequestMapping("/experiencia")
-@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")
-/*@CrossOrigin(origins="**")*/
+@CrossOrigin(origins="https://backendpor.herokuapp.com")
+/*@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")
+@CrossOrigin(origins="**")*/
 public class ExperienciaController {
  @Autowired
  private IExperienciaService iexperienciaService;
