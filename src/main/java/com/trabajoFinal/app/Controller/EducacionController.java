@@ -23,8 +23,8 @@ import com.trabajoFinal.app.Service.IEducacionService;
 
 @RestController
 @RequestMapping("/educacion")
-/*@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")*/
-@CrossOrigin(origins="**")
+@CrossOrigin(origins="https://frontendportfolio-5c98e.web.app")
+/*@CrossOrigin(origins="**")*/
 
 public class EducacionController {
 

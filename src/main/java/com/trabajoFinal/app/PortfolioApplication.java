@@ -20,7 +20,7 @@ public class PortfolioApplication {
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("https://miapp-frontend.herokuapp.com"));
+		corsConfiguration.setAllowedOrigins(Arrays.asList("https://backendpor.herokuapp.com"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
 				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
@@ -28,7 +28,7 @@ public class PortfolioApplication {
 				"Access-Control-Allow-Origin", "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
 		corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
-		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
+		urlBasedCorsConfigurationSource.registerCorsConfiguration("/https://frontendportfolio-5c98e.web.app/", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
 
